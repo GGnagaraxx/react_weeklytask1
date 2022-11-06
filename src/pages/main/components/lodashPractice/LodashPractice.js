@@ -76,7 +76,8 @@ function LodashPractice() {
         console.log('Array Symmetric Difference');
         console.log('Array 1: ', arrOne);
         console.log('Array 2: ', arrTwo);
-        console.log('Results: ', _.partition(_.concat(arrOne, arrTwo), {'id': 30}));
+        console.log('Symmetry by ID: ', _.concat(_.intersectionBy(arrOne, arrTwo, 'id'), _.intersectionBy(arrTwo, arrOne, 'id')));
+        console.log('Difference by ID: ', _.xorBy(arrOne, arrTwo, 'id'));
     }
 
     function probB() {
