@@ -73,10 +73,10 @@ function LodashPractice() {
         }];
 
         console.log('************************************');
-        console.log('Array Difference');
+        console.log('Array Symmetric Difference');
         console.log('Array 1: ', arrOne);
         console.log('Array 2: ', arrTwo);
-        console.log('Results: ', _.zip(_.difference(arrOne, arrTwo), _.difference(arrTwo, arrOne)));
+        console.log('Results: ', _.partition(_.concat(arrOne, arrTwo), {'id': 30}));
     }
 
     function probB() {
